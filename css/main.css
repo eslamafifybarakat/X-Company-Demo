@@ -9,6 +9,7 @@
   --dollar-text: "$";
 }
 /* End Variables */
+
 /* Start Global Rules  */
 * {
   -webkit-box-sizing: border-box;
@@ -51,7 +52,16 @@ ul {
     width: 90%;
   }
 }
+input:focus,
+textarea:focus {
+  outline: none;
+}
+input,
+textarea {
+  border-color: #a2a2a2 !important;
+}
 /* End Global Rules  */
+
 /* Start Components */
 .main-heading {
   text-align: center;
@@ -113,10 +123,11 @@ ul {
 /* End Components */
 /* Start Header */
 header {
-  position: absolute;
+  position: fixed;
   left: 0;
   width: 100%;
-  z-index: 2;
+  z-index: 4;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 header .container {
   display: flex;
@@ -253,6 +264,8 @@ header nav .form i {
 @media (max-width: 767px) {
   .landing .text {
     width: 100%;
+    background-color: transparent;
+    top: 25%;
   }
   .landing .text .content {
     max-width: 100%;
@@ -926,6 +939,7 @@ header nav .form i {
   }
 }
 /* End Subscribe */
+
 /* Start Contact */
 .contact {
   padding-top: var(--section-padding);
@@ -935,10 +949,15 @@ header nav .form i {
   display: flex;
   justify-content: space-between;
 }
-@media (min-width: 768px){
-.contact .container {
+@media (min-width: 768px) {
+  .contact .container {
     width: 60%;
+  }
 }
+@media (min-width: 768px) and (max-width: 991px) {
+  .contact .container {
+    width: 90%;
+  }
 }
 @media (max-width: 767px) {
   .contact .content {
@@ -971,10 +990,6 @@ header nav .form i {
 }
 .contact .content textarea.main-input {
   height: 200px;
-}
-.contact .content input:focus,
-textarea:focus {
-  outline: none;
 }
 .contact .content .info {
   flex-basis: 25%;
