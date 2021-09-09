@@ -1,8 +1,8 @@
 /* Start Variables */
 :root {
-  --main-color: #900000;
+  --main-color: #c70101;
   --transparent-color: #2991ab4d;
-  --alternative-color: #ffd900;
+  --alternative-color: #fd6363;
   --secondary-color: #373637;
   --section-padding: 100px;
   --button-radius: 5px;
@@ -36,19 +36,19 @@ ul {
 /* small */
 @media (min-width: 768px) {
   .container {
-    width: 750px;
+    width: 90%;
   }
 }
 /* Medium */
 @media (min-width: 992px) {
   .container {
-    width: 970px;
+    width: 90%;
   }
 }
 /* large */
 @media (min-width: 1200px) {
   .container {
-    width: 1170px;
+    width: 90%;
   }
 }
 /* End Global Rules  */
@@ -223,26 +223,27 @@ header nav .form i {
 .landing .text {
   position: absolute;
   left: 0;
-  top: 30%;
+  top: 35%;
   transform: translateY(-50px);
   padding: 50px;
-  width: 60%;
+  width: 100%;
   color: white;
   background-color: var(--transparent-color);
   display: flex;
   justify-content: flex-end;
 }
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .landing .text {
-    width: 75%;
+    width: 60%;
   }
 }
 .landing .text .content {
-  max-width: 600px;
+  max-width: 100%;
+  padding-left: 40px;
 }
 .landing .text .content h2 {
-  font-size: 30px;
-  line-height: 1.4;
+  font-size: 33px;
+  line-height: 1.6;
   margin-bottom: 20px;
 }
 .landing .text .content p {
@@ -257,7 +258,7 @@ header nav .form i {
     max-width: 100%;
   }
   .landing .text .content h2 {
-    font-size: 27px;
+    font-size: 33px;
   }
 }
 .landing .change-bg {
@@ -310,7 +311,7 @@ header nav .form i {
 @media (min-width: 768px) {
   .services .container .services-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(45%, 1fr));
     grid-column-gap: 40px;
     grid-row-gap: 60px;
   }
@@ -432,7 +433,7 @@ header nav .form i {
   padding: 10px 30px;
 }
 .portfolio .shuffle li:hover {
-  background-color: var(--main-color);
+  background-color: var(--alternative-color);
   color: white;
   border-radius: var(--button-radius);
 }
@@ -442,7 +443,7 @@ header nav .form i {
   }
 }
 .portfolio .shuffle li.active {
-  background-color: var(--main-color);
+  background-color: var(--alternative-color);
   color: white;
   border-radius: var(--button-radius);
 }
@@ -494,7 +495,7 @@ header nav .form i {
 }
 .portfolio .more {
   color: white;
-  background-color: var(--main-color);
+  background-color: var(--alternative-color);
   padding: 15px 30px;
   text-decoration: none;
   display: block;
@@ -544,7 +545,7 @@ header nav .form i {
   margin-bottom: 25px;
 }
 .video .text button {
-  background-color: black;
+  background-color: var(--alternative-color);
   color: white;
   border: none;
   padding: 15px 60px;
@@ -622,7 +623,7 @@ header nav .form i {
   height: 60px;
   display: flex;
   justify-content: center;
-  background-color: black;
+  background-color: var(--alternative-color);
   align-items: center;
   border-radius: 50%;
   margin: 0 auto 25px;
@@ -719,7 +720,7 @@ header nav .form i {
 }
 .our-skills .skills .prog-holder .prog span {
   display: block;
-  background-color: var(--main-color);
+  background-color: var(--alternative-color);
   height: 100%;
   position: relative;
   border-radius: var(--button-radius);
@@ -778,8 +779,13 @@ header nav .form i {
 
 .pricing .plans {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 30px;
+  grid-template-columns: repeat(auto-fill, minmax(45%, 1fr));
+  gap: 40px;
+}
+@media (min-width: 992px) {
+  .pricing .plans {
+    grid-template-columns: repeat(auto-fill, minmax(20%, 1fr));
+  }
 }
 .pricing .plans .box {
   text-align: center;
@@ -825,7 +831,7 @@ header nav .form i {
   content: "";
   width: 160px;
   height: 1px;
-  background-color: var(--main-color);
+  background-color: #777;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -836,11 +842,12 @@ header nav .form i {
 }
 .pricing .box .foot a {
   text-decoration: none;
-  border: 1px solid var(--main-color);
+  border: 1px solid transparent;
   border-radius: var(--button-radius);
   padding: 15px 40px;
   width: fit-content;
-  background-color: white;
+  color: white;
+  background-color: #000;
 }
 .pricing p.contact-text {
   text-align: center;
@@ -854,7 +861,7 @@ header nav .form i {
   padding: 15px 40px;
   width: fit-content;
   color: white;
-  background-color: var(--main-color);
+  background-color: var(--alternative-color);
   margin: 0px auto;
 }
 /* End Pricing */
@@ -899,7 +906,7 @@ header nav .form i {
 }
 .subscribe form input[type="submit"] {
   width: 130px;
-  background-color: var(--main-color);
+  background-color: var(--alternative-color);
   padding: 20px 20px 20px;
   border: 1px solid white;
   border-left: none;
@@ -928,6 +935,11 @@ header nav .form i {
   display: flex;
   justify-content: space-between;
 }
+@media (min-width: 768px){
+.contact .container {
+    width: 60%;
+}
+}
 @media (max-width: 767px) {
   .contact .content {
     flex-direction: column;
@@ -946,7 +958,7 @@ header nav .form i {
 }
 .contact .content input[type="submit"] {
   width: fit-content;
-  background-color: var(--main-color);
+  background-color: var(--alternative-color);
   padding: 20px;
   border: none;
   border-radius: var(--button-radius);
