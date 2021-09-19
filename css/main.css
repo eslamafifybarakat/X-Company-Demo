@@ -176,9 +176,11 @@ header nav ul {
     flex-direction: column;
     position: absolute;
     top: 100%;
-    left: 0;
+    left: 15px;
     width: 100%;
-    background-color: #00000083;
+    background-color: #000000e6;
+    border-radius: var(--button-radius);
+    width: 90%;
   }
   header nav ul a {
     padding: 15px !important;
